@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cardGroup{
+    @apply flex flex-wrap justify-evenly mb-10;
+}
+.MuiCard-root{
+    @apply m-10 mb-0;
+}
+.loginForm{
+    @apply flex flex-col w-full;
+}
+.loaderSection{
+    @apply flex flex-col w-full h-[80vh] justify-center items-center;
+}
+a{
+    @apply !underline;
+}
+.MuiSvgIcon-root{
+    @apply mx-2 cursor-pointer;
+}
+.mainVideoSection{
+    @apply m-2 lg:w-[640px] xl:w-[750px] 2xl:w-[930px];
+}
+.videoContainer{
+    @apply border w-full rounded-lg h-[15rem] bg-black sm:h-[25rem] lg:h-[360px]  xl:h-[480px]  2xl:h-[570px] ;
+}
+video{
+    @apply w-full h-full rounded-lg;
+}
+.MuiCard-root{
+    @apply w-full;
+}
+.totalVideoPage{
+    @apply flex flex-wrap mt-7;
+}
+.remaingSpace{
+    @apply flex flex-col gap-3;
+}
+.scrollCategory{
+    @apply overflow-x-auto
+}
+.scrollCategory::-webkit-scrollbar { 
+    display: none; /* Hide scrollbar */
+}
+.channelImg{
+    @apply w-0 h-0 p-4 rounded-[50%] bg-gray-400 flex items-center justify-center text-white font-semibold;
+}
+.MuiCard-root{
+    @apply m-0;
+}
+.custom-sidebar{
+    @apply hidden ;
+}
+.custom-sidebar{
+    @media(min-width:1200px) {
+        display: block;
+    }
+}
+.show-custom-sidebar{
+    @media(min-width:1200px) {
+        display: flex;
+    }
+}
+.errorPageMain{
+    @apply w-full flex flex-col justify-center items-center gap-3;
+}
+.MuiDrawer-paperAnchorLeft{
+    @apply !bg-[white];
+}
+header{
+    --Paper-shadow:0px !important;
+    @apply !bg-white !text-black;
+}
+.customPadding{
+    @apply px-4 md:px-8 xl:px-28;
+    @media(min-width:2560px) {
+        height: 275px;
+        padding-left: 275px;
+        padding-right: 275px;
+    }
+}
+.bannerImg{
+    @apply w-full h-[110px] sm:h-[206px];
+    
+}
+.banner-img{
+    @apply w-full h-full rounded-3xl;
+}
+.css-1wnsr1i{
+    width: auto !important;
+}
+.modalBox{
+    @apply h-[500px] overflow-y-scroll;
+}
+.modalBox::-webkit-scrollbar { 
+    display: none; /* Hide scrollbar */
+}

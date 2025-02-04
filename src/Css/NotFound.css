@@ -1,0 +1,38 @@
+/*css for 404 page*/
+.error-page-main-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.error-code {
+    font-size:
+100px;
+    color: #ccc;
+}
+
+.error-message {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #666;
+}
+
+.back-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}

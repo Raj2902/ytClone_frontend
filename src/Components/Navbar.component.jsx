@@ -364,7 +364,7 @@ export default function Navbar(props) {
             >
               <div className="flex items-center">
                 <img
-                  src={base_url + "/YouTube-Logo.png"}
+                  src={base_url + "/images/YouTube-Logo.png"}
                   alt="logo"
                   width="150"
                   height="150"

@@ -36,7 +36,7 @@ export default function Video() {
   const { data, isLoading, error } = useApiCall(`${base_url}/videos/${id}`);
 
   //state to manage if editing commments is enabled or not.
-  const [editable, setEditable] = useState(false);
+  const [editable, setEditable] = useState("edit-1");
 
   const [commentChange, setCommentChange] = useState("");
 
@@ -61,7 +61,7 @@ export default function Video() {
         throw new Error(result.message);
       }
       toast.success(result.message);
-      setEditable(false);
+      setEditable("edit-1");
     } catch (err) {
       toast.error(err.message);
     }
@@ -243,13 +243,15 @@ export default function Video() {
                               }
                               className="bg-gray-200 p-1 rounded-[50%]"
                               onClick={() => {
-                                setEditable(true);
+                                setEditable(`edit${index}`);
                               }}
                             />
                           </p>
                           <div className="flex gap-2 flex-wrap">
                             <p
-                              contentEditable={editable}
+                              contentEditable={
+                                editable == `edit${index}` ? true : false
+                              }
                               suppressContentEditableWarning
                               onInput={(e) => handleCommentInput(e)}
                               style={
@@ -265,7 +267,7 @@ export default function Video() {
                             >
                               {comm.text}
                             </p>
-                            {editable &&
+                            {editable == `edit${index}` &&
                               localUser &&
                               localUser.username === comm.username && (
                                 <>
@@ -280,7 +282,7 @@ export default function Video() {
                                   </button>
                                   <button
                                     className="bg-red-600 uppercase text-white rounded-full px-4 py-2 w-fit"
-                                    onClick={() => setEditable(false)}
+                                    onClick={() => setEditable("edit-1")}
                                   >
                                     Cancel
                                   </button>

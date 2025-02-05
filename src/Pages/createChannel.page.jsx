@@ -143,10 +143,7 @@ export default function CreateChannel() {
   async function handleFormSubmission(event) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    // console.log(
-    //   "form data from create channel::",
-    //   Object.fromEntries(formData.entries())
-    // );
+
     //hit the api to create channel
     try {
       const createChannelData = await fetch(`${base_url}/create-channel`, {
